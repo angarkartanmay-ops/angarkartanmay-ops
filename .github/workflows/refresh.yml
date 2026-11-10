@@ -1,0 +1,40 @@
+name: refresh-profile
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - projects.json
+      - scripts/build.py
+      - scripts/fetch_fonts.py
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fonts
+        run: |
+          pip install fonttools brotli
+          python scripts/fetch_fonts.py
+      - name: Topo background (first run only)
+        run: |
+          if [ ! -f data/topo.json ]; then
+            pip install numpy matplotlib
+            python scripts/make_topo.py
+          fi
+      - name: Build assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build.py
+      - name: Commit if changed
+        run: |
+          git config user.name "profile-bot"
+          git config user.email "profile-bot@users.noreply.github.com"
+          git add assets data
+          git diff --cached --quiet || (git commit -m "refresh profile assets" && git push)
