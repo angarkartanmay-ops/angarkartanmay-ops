@@ -1,0 +1,101 @@
+{
+  "login": "angarkartanmay-ops",
+  "featured": [
+    {
+      "repo": "ClipDeck",
+      "name": "ClipDeck",
+      "status": "SHIPPED / DAILY DRIVER",
+      "pitch": [
+        "Always-on clipboard history for",
+        "Windows, macOS and Linux. Offline."
+      ],
+      "tags": [
+        "Rust",
+        "Tauri",
+        "Privacy-first"
+      ]
+    },
+    {
+      "repo": "cbomscan",
+      "name": "cbomscan",
+      "status": "TEAM PROJECT / MAINTAINER",
+      "pitch": [
+        "Finds quantum-vulnerable crypto in",
+        "compiled ESP32 firmware. CBOM out."
+      ],
+      "tags": [
+        "Python",
+        "CycloneDX",
+        "ESP32"
+      ]
+    },
+    {
+      "repo": "Spillway",
+      "name": "Spillway",
+      "status": "TEAM CAPSTONE",
+      "pitch": [
+        "Real-time multiplayer card game with",
+        "bots that learn from past matches."
+      ],
+      "tags": [
+        "Socket.IO",
+        "MongoDB",
+        "Three.js"
+      ]
+    },
+    {
+      "repo": "Quorum",
+      "name": "QUORUM",
+      "status": "LIVE / PRACTICE MODE",
+      "pitch": [
+        "Group-buying for campus merch: every",
+        "joiner lowers the price for all."
+      ],
+      "tags": [
+        "Next.js",
+        "Postgres",
+        "Razorpay"
+      ]
+    },
+    {
+      "repo": "DeceptEnv",
+      "name": "DeceptEnv",
+      "status": "META OPENENV FINALIST",
+      "pitch": [
+        "RL environment that stress-tests LLM",
+        "agents on deceptive behavior."
+      ],
+      "tags": [
+        "Python",
+        "RL",
+        "OpenEnv"
+      ]
+    },
+    {
+      "repo": "GameGuide-AI",
+      "name": "GameGuide-AI",
+      "status": "LIVE / PRODUCT HUNT",
+      "pitch": [
+        "Spoiler-safe assistant for 200+ games,",
+        "live at gameguide.online."
+      ],
+      "tags": [
+        "LLM mesh",
+        "RAG",
+        "Discord bot"
+      ]
+    }
+  ],
+  "hero": {
+    "tag": "AI / ML DEVELOPER  \u00b7  BENGALURU",
+    "name": "Tanmay Angarkar",
+    "lines": [
+      "Builds LLM apps that hold up in production.",
+      "Meta PyTorch OpenEnv finalist. Top 800 of 31,000+ teams.",
+      "Scans firmware for quantum-vulnerable crypto.",
+      "Ships a Rust clipboard manager he uses daily.",
+      "Changelog: fewer bugs than last release (allegedly)."
+    ],
+    "footer": "agents / RAG / evals / multi-provider failover"
+  }
+}
